@@ -47,6 +47,7 @@ infected_line, = ax.plot([], [], label='Infected')
 dead_line, = ax.plot([], [], label='Dead')
 ax.legend()
 
+
 def init():
     ax.set_xlim(0, t_max)
     ax.set_ylim(0, N_pessoas)
