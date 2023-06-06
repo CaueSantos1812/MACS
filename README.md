@@ -20,9 +20,9 @@ FUTURAS ADIÇÕES NO CÓDIGO
 
 Pensando na melhor utilização do código e na verossimilhança com o mundo real, vamos modificar o código para que este consiga simular o comportamento de "ondas de infecções" assim como observamos em casos reais. Além disso, da maneira como o código está funcionando atualmente, tudo está muito sensível à valores iniciais específicos e uma possível alteração neles (principalmente nas taxas de infecção, recuperação e morte) fazem a função explodir. Resultando em um gráfico inconsistente ou então em um erro apontado pelo python. Percebemos que a nossa lógica está funcionando, mas precisamos refinar a maneira que o programa faz isso, possibilitando que o usuário tenha uma experiência mais adequada com o uso.
 
-COMO UTILIZAR O CÓDIGO
+COMO UTILIZAR O CÓDIGO (E ATUAL ESTADO DO CÓDIGO)
 
-Nosso código, que está no arquivo NOMEARQUIVO, consiste em 3 funções: 'plotagem', que gera os dados da nossa simulação; 'gera_gif', que gera o gráfico para essa simulação e salva essa imagem; e NOME3, que gera um gif do gráfico e salva ele. 
+Nosso código, que está no arquivo 'MACS corrigida', consiste em 3 funções: 'simulate_virus_spread', que gera os dados da nossa simulação; 'gera_gif', que gera o gráfico para essa simulação e salva essa imagem; e 'gera_gif', que gera um gif do gráfico e salva ele. 
 
 A função 'simulate_virus_spread' recebe 8 argumentos, sendo eles os parâmetros da simulação: N (número total de pessoas do sistema); I0 (número inicial de pessoas infectadas); D0 (número inicial de pessoas mortas); R0 (número inicial de pessoas infectadas); beta (taxa de infecção); gamma (taxa de infecção); mu (taxa de mortalidade) e t_max (tempo de duração da simulação). Como retorno, ela devolve 3 listas que mostram a evolução do nosso sistema, sendo o primeiro retorno a lista 'susceptible', o segundo a lista 'infected' e por último a lista 'dead'. O função recebe os parâmetros da simulação, utiliza a modelagem que adaptamos do modelo SIR, e retorna as listas em questão. Ainda estamos testando o comportamento da nossa função conforme os parâmetros iniciais, e futuramente podemos inserir intervalos de parâmetros ideais para uma melhor simulação, para evitar possíveis comportamentos esquisitos da função. 
 
@@ -30,4 +30,4 @@ As duas outras funções, 'plotagem' e 'gera_gif', são basicamente opções de 
 
 A função 'plotagem' recebe 4 argumentos: os 3 primeiros são as as listas que obtemos quando realizamos a simulação com a função 'simulate_virus_spread', ou seja, basta definirmos 3 variáveis que vão armazenar as listas de retorno dessa função, e a ordem das listas é: pessoas suscetíveis, infectadas e mortas, então esses 3 argumentos têm que estar nessa ordem. O último argumento, 'string', é o nome da imagem que será salva, sendo ela uma string.
 
-A função 'gera_gif' recebe como argumento
+A função 'gera_gif' a função 'gera_gif' ainda está sendo desenvolvida para a utilização do usuário. Apesar de estarmos conseguindo gerar o gif, não fizemos uma função agradável e organizada para o usuário externo gerar seu próprio gif, mas na próxima aula ela será terminada e adicionada ao código.
