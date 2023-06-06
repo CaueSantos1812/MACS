@@ -19,3 +19,11 @@ Com o nosso código, o usuário pode ter uma noção básica do comportamento de
 FUTURAS ADIÇÕES NO CÓDIGO
 
 Pensando na melhor utilização do código e na verossimilhança com o mundo real, vamos modificar o código para que este consiga simular o comportamento de "ondas de infecções" assim como observamos em casos reais. Além disso, da maneira como o código está funcionando atualmente, tudo está muito sensível à valores iniciais específicos e uma possível alteração neles (principalmente nas taxas de infecção, recuperação e morte) fazem a função explodir. Resultando em um gráfico inconsistente ou então em um erro apontado pelo python. Percebemos que a nossa lógica está funcionando, mas precisamos refinar a maneira que o programa faz isso, possibilitando que o usuário tenha uma experiência mais adequada com o uso.
+
+COMO UTILIZAR O CÓDIGO
+
+Nosso código, que está no arquivo NOMEARQUIVO, consiste em 3 funções: NOME1, que gera os dados da nossa simulação; NOME2, que gera o gráfico para essa simulação e salva essa imagem; e NOME3, que gera um gif do gráfico e salva ele. 
+
+A função NOME1 recebe 8 argumentos, sendo eles os parâmetros da simulação: N (número total de pessoas do sistema); I0 (número inicial de pessoas infectadas); D0 (número inicial de pessoas mortas); R0 (número inicial de pessoas infectadas); beta (taxa de infecção); gamma (taxa de infecção); mu (taxa de mortalidade) e t_max (tempo de duração da simulação). Como retorno, ela devolve 3 listas que mostram a evolução do nosso sistema, sendo o primeiro retorno a lista 'susceptible', o segundo a lista 'infected' e por último a lista 'dead'. O função recebe os parâmetros da simulação, utiliza a modelagem que adaptamos do modelo SIR, e retorna as listas em questão. Ainda estamos testando o comportamento da nossa função conforme os parâmetros iniciais, e futuramente podemos inserir intervalos de parâmetros ideais para uma melhor simulação, para evitar possíveis comportamentos esquisitos da função.
+
+As duas outras funções, NOME2 e NOME3, são basicamente opções de visualização dos dados obtidos da função NOME1, sendo  NOME2 para gerarmos um gráfico, e NOME3 para gerar um gif. 
