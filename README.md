@@ -61,4 +61,6 @@ A função 'gera_gif' recebe 9 argumentos:
 - tempo (tempo de duração da simulação)
 - nome_arquivo (string com o nome do arquivo .gif)
 
-Seu retorno é uma imagem .png com o nome da variável 'string'.
+Seu retorno é um gif .gif com o nome da variável 'nome_arquivo'.
+
+Para deixarmos o código mais interativo para o usuário, fizemos a inserção de parâmetros através da função 'input()', perguntando também se o usuário quer gerar uma imagem ou um gif. Ou seja, teremos várias perguntas antes do código gerar a imagem ou o gif, como "Você deseja gerar um gráfico (1) ou um gif (2)?", dentre outras perguntas para recolhermos as informações que o usuário necessita inserir para o funcionamento da simulação. 
