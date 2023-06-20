@@ -2,32 +2,69 @@
 Trabalho Semestral de Ciência de Dados
 Grupo: Anna Karen, Cauê Santos, Matheus Zaia e Samira
 
-RESUMO DO QUE FIZEMOS ATÉ AGORA
 
-Nosso projeto semestral tinha como objetivo realizar a simulação de uma doença dentro de uma população, visualizando essa dinâmica através de gráficos. Até hoje, dia 30/05, encontramos um modelo matemático que modela a dinâmica de doenças, chamado SIR (Suscetíveis, Infectados, Removidos), entendendo seu funcionamento e construção, e adaptamos ele para um código em Python. Também utilizamos a biblioteca "random" para aumentar a aleatoriedade da doença, assim como a biblioteca "matplotlib" para plotarmos os gráficos e animações dos dados obtidos.  
+APRESENTAÇÃO GERAL DO TRABALHO
 
-MAIS DETALHES DO QUE FIZEMOS
+O nosso trabalho semestral teve como objetivo fazer uma simulação de doenças dentro de uma população, com a opção de visualizar essa dinãmica através de um gráfico e de um gif. O modelo matemático utilizado para a nossa simulação foi uma variação do modelo epidemiológico SIR (Suscetíveis-Infectados-Recuperados), desenvolvido por McKendrick e Kermack em 1927, e entre as doenças que podem ser estudadas com este modelo encontram-se a Rubéola, o Sarampo e a Varíola. O modelo é baseado em equações diferenciais, e no nosso código utilizamos uma abordagem recursiva para a interação das classes de pessoas (susceptíveis, infectados e mortos).
 
-Inicialmente, tínhamos a ideia de criar um código que mostrasse de forma visual, a partir de uma animação, a evolução de uma epidemia em um dado período de tempo. O modelo utilizado foi uma variação do modelo epidemiológico SIR (Suscetíveis-Infectados-Recuperados), desenvolvido por McKendrick e Kermack em 1927, e entre as doenças que podem ser estudadas com este modelo encontram-se a Rubéola, o Sarampo e a Varíola. 
+Cada doença apresenta um comportamento diferente dentro da população, e isso é refletido nos parâmetros que usamos no nosso modelo, sendo todos eles escolhidos pelo usuário. Os parâmetros são: 
 
-Todos os parâmetros usados no modelo podem ser alterados no nosso código, caracterizando assim diferentes doenças, sendo eles: 1. número total da população; 2. número inicial de infectados; 3. número inicial de mortes; 4. número inicial de recuperados; 5. taxa de infecção do patógeno; 6. taxa de recuperação dos infectados; 7. taxa de mortalidade do patógeno; 8. tempo de duração (em dias) da análise de infecção. Desta forma, o código retornaria ao usuário os dados relacionados do: 1. número de pessoas suscetíveis à infecção; 2. número de pessoas infectadas; 3. número de pessoas mortas. No arquivo "MACS - Projeto.py" temos o código com o modelo e os gráficos com as 3 curvas representando as classes de pessoas durante a epidemia, que estão animados através da biblioteca "matplotlib.FuncAnimation".
+- Número de pessoas na população 
+- Número inicial de infectados 
+- Número inicial de mortes
+- Número inicial de recuperados 
+- Taxa de infecção do patógeno
+- Taxa de recuperação dos infectados 
+- Taxa de mortalidade do patógeno 
+- Tempo de duração (em dias) da simulação
 
-UTILIZAÇÕES DO PROJETO PARA USUÁRIOS
+Com o nosso código, o usuário pode ter uma noção básica do comportamento de uma doença em meio à uma população através dos gráficos obtidos, assim como ter uma noção básica de como os parâmetros da doença afetam o seu desenvolvimento dentro da população. O modelo matemático utilizado possui algumas limitações, como o fato de quando fixamos as taxas de infecção e recuperação, e aumentamos a taxa de mortalidade, o número de mortos sempre chega em um mesmo valor final. Isso acontece devido a forma como o nosso modelo matemático foi desenvolvido, e para realizar simulações mais complexas, precisaríamos de um modelo matemático mais avançado. 
 
-Com o nosso código, o usuário pode ter uma noção básica do comportamento de uma doença em meio à uma população através dos gráficos obtidos, assim como ter uma noção de como mudar os parâmetros da doença afetam o seu desenvolvimento. Porém, nosso código também pode servir como base para outros tipos de simulação, afinal, dadas as regras sobre como o seu sistema evolui com o tempo, o usuário poderia facilmente modificar o código a fim de utilizá-lo para um outro tipo de simulação com comportamento parecido, como o crescimento de populações, por exemplo. 
+Mesmo com certas limitações, conseguimos ver comportamentos coerentes com a nossa simulação: novamente com as taxas de infecção e recuperação fixadas, conforme aumentamos a taxa de mortalidade o número de mortos cresce mais rapidamente, apesar de chegarmos sempre no mesmo valor crítico de mortos. 
 
-FUTURAS ADIÇÕES NO CÓDIGO
+Nosso código também pode servir como 'esqueleto' para outros tipos de simulação, afinal, dadas as regras sobre como o seu sistema evolui com o tempo, o usuário poderia facilmente modificar o código a fim de utilizá-lo para um outro tipo de simulação com comportamento parecido, como o crescimento de populações, por exemplo. O usuário também pode utilizar o código para adicionar mais complexidade a simulação de doenças, como implementar o sistema de ondas de reinfecção, políticas de lockdown, vacinação, dentre outros fatores que podem ser modelados matematicamente.
 
-Pensando na melhor utilização do código e na verossimilhança com o mundo real, vamos modificar o código para que este consiga simular o comportamento de "ondas de infecções" assim como observamos em casos reais. Além disso, da maneira como o código está funcionando atualmente, tudo está muito sensível à valores iniciais específicos e uma possível alteração neles (principalmente nas taxas de infecção, recuperação e morte) fazem a função explodir. Resultando em um gráfico inconsistente ou então em um erro apontado pelo python. Percebemos que a nossa lógica está funcionando, mas precisamos refinar a maneira que o programa faz isso, possibilitando que o usuário tenha uma experiência mais adequada com o uso.
 
-COMO UTILIZAR O CÓDIGO (E ATUAL ESTADO DO CÓDIGO)
+COMO USAR O CÓDIGO
 
-Nosso código, que está no arquivo 'MACS corrigida', consiste em 3 funções: 'simulate_virus_spread', que gera os dados da nossa simulação; 'gera_gif', que gera o gráfico para essa simulação e salva essa imagem; e 'gera_gif', que gera um gif do gráfico e salva ele. 
+Nosso código, que está no arquivo 'MACS.ipynb', consiste em 3 funções: 'simulate_virus_spread', que gera os dados da nossa simulação; 'plotagem', que gera o gráfico para essa simulação e salva essa imagem; e 'gera_gif', que gera um gif do gráfico e salva ele. 
 
-A função 'simulate_virus_spread' recebe 8 argumentos, sendo eles os parâmetros da simulação: N (número total de pessoas do sistema); I0 (número inicial de pessoas infectadas); D0 (número inicial de pessoas mortas); R0 (número inicial de pessoas infectadas); beta (taxa de infecção); gamma (taxa de infecção); mu (taxa de mortalidade) e t_max (tempo de duração da simulação). Como retorno, ela devolve 3 listas que mostram a evolução do nosso sistema, sendo o primeiro retorno a lista 'susceptible', o segundo a lista 'infected' e por último a lista 'dead'. O função recebe os parâmetros da simulação, utiliza a modelagem que adaptamos do modelo SIR, e retorna as listas em questão. Ainda estamos testando o comportamento da nossa função conforme os parâmetros iniciais, e futuramente podemos inserir intervalos de parâmetros ideais para uma melhor simulação, para evitar possíveis comportamentos esquisitos da função. 
+A função 'simulate_virus_spread' recebe 8 argumentos, sendo eles os parâmetros da simulação: 
 
-As duas outras funções, 'plotagem' e 'gera_gif', são basicamente opções de visualização dos dados obtidos da função 'simulate_virus_spread', sendo  'plotagem' para gerarmos um gráfico, e 'gera_gif' para gerar um gif. 
+- N (número total de pessoas do sistema) 
+- I0 (número inicial de pessoas infectadas)
+- D0 (número inicial de pessoas mortas)
+- R0 (número inicial de pessoas infectadas)
+- beta (taxa de infecção)
+- gamma (taxa de recuperação)
+- mu (taxa de mortalidade) 
+- t_max (tempo de duração da simulação)
 
-A função 'plotagem' recebe 4 argumentos: os 3 primeiros são as as listas que obtemos quando realizamos a simulação com a função 'simulate_virus_spread', ou seja, basta definirmos 3 variáveis que vão armazenar as listas de retorno dessa função, e a ordem das listas é: pessoas suscetíveis, infectadas e mortas, então esses 3 argumentos têm que estar nessa ordem. O último argumento, 'string', é o nome da imagem que será salva, sendo ela uma string.
+Como retorno, ela devolve 3 listas que mostram a evolução do nosso sistema, sendo o primeiro retorno a lista 'susceptible', o segundo a lista 'infected' e por último a lista 'dead'. A função recebe os parâmetros da simulação, utiliza a modelagem que adaptamos do modelo SIR, e retorna as listas em questão. 
 
-A função 'gera_gif' a função 'gera_gif' ainda está sendo desenvolvida para a utilização do usuário. Apesar de estarmos conseguindo gerar o gif, não fizemos uma função agradável e organizada para o usuário externo gerar seu próprio gif, mas na próxima aula ela será terminada e adicionada ao código.
+As duas outras funções, 'plotagem' e 'gera_gif', são opções de visualização dos dados obtidos da função 'simulate_virus_spread', sendo  'plotagem' para gerarmos um gráfico, e 'gera_gif' para gerar um gif. 
+
+A função 'plotagem' recebe 4 argumentos: 
+
+- s (lista com as pessoas susceptíveis, obtida pela função 'simulate_virus_spread')
+- i (lista com as pessoas infectadas, obtida pela função 'simulate_virus_spread')
+- m (lista com as pessoas mortas, obtida pela função 'simulate_virus_spread')
+- string (uma string com o nome do arquivo .png)
+
+Seu retorno é uma imagem .png com o nome da variável 'string'.
+
+A função 'gera_gif' recebe 9 argumentos:
+
+- N (número total de pessoas do sistema) 
+- I0 (número inicial de pessoas infectadas)
+- D0 (número inicial de pessoas mortas)
+- R0 (número inicial de pessoas infectadas)
+- beta (taxa de infecção)
+- gamma (taxa de recuperação)
+- mu (taxa de mortalidade) 
+- tempo (tempo de duração da simulação)
+- nome_arquivo (string com o nome do arquivo .gif)
+
+Seu retorno é um gif .gif com o nome da variável 'nome_arquivo'.
+
+Para deixarmos o código mais interativo para o usuário, fizemos a inserção de parâmetros através da função 'input()', perguntando também se o usuário quer gerar uma imagem ou um gif. Ou seja, teremos várias perguntas antes do código gerar a imagem ou o gif, como "Você deseja gerar um gráfico (1) ou um gif (2)?", dentre outras perguntas para recolhermos as informações que o usuário necessita inserir para o funcionamento da simulação. 
