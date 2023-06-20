@@ -22,10 +22,7 @@ Com o nosso código, o usuário pode ter uma noção básica do comportamento de
 
 Mesmo com certas limitações, conseguimos ver comportamentos coerentes com a nossa simulação: novamente com as taxas de infecção e recuperação fixadas, conforme aumentamos a taxa de mortalidade o número de mortos cresce mais rapidamente, apesar de chegarmos sempre no mesmo valor crítico de mortos. 
 
-Nosso código também pode servir como 'esqueleto' para outros tipos de simulação, afinal, dadas as regras sobre como o seu sistema evolui com o tempo, o usuário poderia facilmente modificar o código a fim de utilizá-lo para um outro tipo de simulação com comportamento parecido, como o crescimento de populações, por exemplo. O usuário também pode utilizar o código para adicionar mais complexidade a simulação de doenças, como implementar o sistema de ondas de reinfecção, políticas de lockdown, vacinação, dentre outros fatores que podem ser modelados matematicamente.
-
-![Texto alternativo](imagem_teste2.png)
-!(MACS/imagem_teste1.png)
+Nosso código também pode servir como 'esqueleto' para outros tipos de simulação, afinal, dadas as regras sobre como o seu sistema evolui com o tempo, o usuário poderia facilmente modificar o código a fim de utilizá-lo para um outro tipo de simulação com comportamento parecido, como o crescimento de populações, por exemplo. O usuário também pode utilizar o código para adicionar mais complexidade a simulação de doenças, como implementar o sistema de ondas de reinfecção, políticas de lockdown, vacinação, dentre outros fatores que podem ser modelados matematicamente. 
 
 COMO USAR O CÓDIGO
 
@@ -70,3 +67,45 @@ A função 'gera_gif' recebe 9 argumentos:
 Seu retorno é um gif .gif com o nome da variável 'nome_arquivo'.
 
 Para deixarmos o código mais interativo para o usuário, fizemos a inserção de parâmetros através da função 'input()', perguntando também se o usuário quer gerar uma imagem ou um gif. Ou seja, teremos várias perguntas antes do código gerar a imagem ou o gif, como "Você deseja gerar um gráfico (1) ou um gif (2)?", dentre outras perguntas para recolhermos as informações que o usuário necessita inserir para o funcionamento da simulação. 
+
+EXEMPLOS
+
+Vamos utilizar os seguintes parâmetros para o primeiro gráfico que será deixado como exemplo: 
+
+- N = 1500
+- I0 = 1
+- D0 = 0
+- R0 = 0
+- beta = 0.2
+- gamma = 0.05
+- mu = 0.001
+- tempo = 10000
+
+![Texto alternativo](imagem_teste1.png)
+
+Para o segundo gráfico vamos utilizar os mesmos parâmetros, porém, subindo a taxa de mortalidade em 10 vezes, para mostrarmos a limitação do modelo utilizado:
+
+- N = 1500
+- I0 = 1
+- D0 = 0
+- R0 = 0
+- beta = 0.2
+- gamma = 0.05
+- mu = 0.01
+- tempo = 10000
+
+![Texto alternativo](imagem_teste2.png)
+
+Vemos que mesmo subindo a taxa de mortaldade, o número máximo de mortos não se altera, deixando os outros parâmetros fixos. Isso sempre vai acontecer, se deixarmos a simulação rodar por tempo o suficiente.
+
+Não conseguimos botar um exemplo de gif aqui no README.mb, porém, abaixo estão os parâmetros que utilizamos para gerar o gif 'Gif teste.gif':
+
+- N = 1500
+- I0 = 1
+- D0 = 0
+- R0 = 0
+- beta = 0.2
+- gamma = 0.05
+- mu = 0.01
+- tempo = 365
+  
