@@ -24,6 +24,7 @@ Mesmo com certas limitações, conseguimos ver comportamentos coerentes com a no
 
 Nosso código também pode servir como 'esqueleto' para outros tipos de simulação, afinal, dadas as regras sobre como o seu sistema evolui com o tempo, o usuário poderia facilmente modificar o código a fim de utilizá-lo para um outro tipo de simulação com comportamento parecido, como o crescimento de populações, por exemplo. O usuário também pode utilizar o código para adicionar mais complexidade a simulação de doenças, como implementar o sistema de ondas de reinfecção, políticas de lockdown, vacinação, dentre outros fatores que podem ser modelados matematicamente.
 
+![Texto alternativo](caminho/para/a/imagem.png)
 !(MACS/imagem_teste1.png)
 
 COMO USAR O CÓDIGO
