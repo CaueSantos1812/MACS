@@ -27,7 +27,7 @@ Nosso código também pode servir como 'esqueleto' para outros tipos de simulaç
 
 COMO USAR O CÓDIGO
 
-Nosso código, que está no arquivo 'MACS - Final', consiste em 3 funções: 'simulate_virus_spread', que gera os dados da nossa simulação; 'plotagem', que gera o gráfico para essa simulação e salva essa imagem; e 'gera_gif', que gera um gif do gráfico e salva ele. 
+Nosso código, que está no arquivo 'MACS.ipynb', consiste em 3 funções: 'simulate_virus_spread', que gera os dados da nossa simulação; 'plotagem', que gera o gráfico para essa simulação e salva essa imagem; e 'gera_gif', que gera um gif do gráfico e salva ele. 
 
 A função 'simulate_virus_spread' recebe 8 argumentos, sendo eles os parâmetros da simulação: 
 
