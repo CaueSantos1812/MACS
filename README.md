@@ -18,7 +18,11 @@ Cada doença apresenta um comportamento diferente dentro da população, e isso 
 - Taxa de mortalidade do patógeno 
 - Tempo de duração (em dias) da simulação
 
-Com o nosso código, o usuário pode ter uma noção básica do comportamento de uma doença em meio à uma população através dos gráficos obtidos, assim como ter uma noção de como mudar os parâmetros da doença afetam o seu desenvolvimento. Porém, nosso código também pode servir como 'esqueleto' para outros tipos de simulação, afinal, dadas as regras sobre como o seu sistema evolui com o tempo, o usuário poderia facilmente modificar o código a fim de utilizá-lo para um outro tipo de simulação com comportamento parecido, como o crescimento de populações, por exemplo. 
+Com o nosso código, o usuário pode ter uma noção básica do comportamento de uma doença em meio à uma população através dos gráficos obtidos, assim como ter uma noção básica de como os parâmetros da doença afetam o seu desenvolvimento dentro da população. O modelo matemático utilizado possui algumas limitações, como o fato de quando fixamos as taxas de infecção e recuperação, e aumentamos a taxa de mortalidade, o número de mortos sempre chega em um mesmo valor final. Isso acontece devido a forma como o nosso modelo matemático foi desenvolvido, e para realizar simulações mais complexas, precisaríamos de um modelo matemático mais avançado. 
+
+Mesmo com certas limitações, conseguimos ver comportamentos coerentes com a nossa simulação: novamente com as taxas de infecção e recuperação fixadas, conforme aumentamos a taxa de mortalidade o número de mortos cresce mais rapidamente, apesar de chegarmos sempre no mesmo valor crítico de mortos. 
+
+Nosso código também pode servir como 'esqueleto' para outros tipos de simulação, afinal, dadas as regras sobre como o seu sistema evolui com o tempo, o usuário poderia facilmente modificar o código a fim de utilizá-lo para um outro tipo de simulação com comportamento parecido, como o crescimento de populações, por exemplo. O usuário também pode utilizar o código para adicionar mais complexidade a simulação de doenças, como implementar o sistema de ondas de reinfecção, políticas de lockdown, vacinação, dentre outros fatores que podem ser modelados matematicamente.
 
 
 COMO USAR O CÓDIGO
