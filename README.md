@@ -96,9 +96,9 @@ Para o segundo gráfico vamos utilizar os mesmos parâmetros, porém, subindo a 
 
 ![Texto alternativo](imagem_teste2.png)
 
-Vemos que mesmo subindo a taxa de mortaldade, o número máximo de mortos não se altera, deixando os outros parâmetros fixos. Isso sempre vai acontecer, se deixarmos a simulação rodar por tempo o suficiente.
+Vemos que mesmo subindo a taxa de mortalidade, o número máximo de mortos não se altera, deixando os outros parâmetros fixos. Isso sempre vai acontecer, se deixarmos a simulação rodar por tempo o suficiente.
 
-Não conseguimos botar um exemplo de gif aqui no README.mb, porém, abaixo estão os parâmetros que utilizamos para gerar o gif 'Gif teste.gif':
+Não conseguimos inserir um exemplo de gif aqui no README.mb, porém, abaixo estão os parâmetros que utilizamos para gerar o gif 'Gif teste.gif':
 
 - N = 1500
 - I0 = 1
@@ -109,3 +109,4 @@ Não conseguimos botar um exemplo de gif aqui no README.mb, porém, abaixo estã
 - mu = 0.01
 - tempo = 365
   
+![Texto alternativo](Gif teste.gif)
